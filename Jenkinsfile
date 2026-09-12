@@ -1,4 +1,4 @@
-pipeline {
+ipipeline {
     agent any
 
     tools {
@@ -14,14 +14,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                echo 'Cloning source code from GitLab...'
-                git branch: 'main',
-                    url: 'https://gitlab.com/<your-username>/student-form-app.git',
-                    credentialsId: 'gitlab-credentials'
-            }
-        }
 
         stage('Build') {
             steps {
